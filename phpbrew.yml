@@ -1,0 +1,15 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: get phpbrew script
+      command: curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+
+    - name: change file permission to be executable
+      command: chmod +x phpbrew
+      
+    - name: move phpbrew
+      command: mv phpbrew /usr/local/bin/phpbrew
+
+    - name: install zsh
+      script: /tmp/oh-my-zsh.sh
