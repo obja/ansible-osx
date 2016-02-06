@@ -1,0 +1,9 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install UnRarX
+      mac_pkg: pkg_type=app
+               url=http://www.unrarx.com/files/UnRarX_2.2.zip
+               archive_type=zip archive_path='UnRarX.app'
+      sudo: yes
