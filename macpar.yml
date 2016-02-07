@@ -1,0 +1,10 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install MacPar
+      mac_pkg: pkg_type=app
+               url=http://www.xs4all.nl/~gp/MacPAR_deLuxe/MacPARdeLuxe.dmg
+               archive_type=dmg archive_path='MacPAR deLuxe.app'
+      sudo: yes
+
